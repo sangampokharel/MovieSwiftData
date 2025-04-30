@@ -13,9 +13,11 @@ final class Movies {
     
     @Attribute(.unique) var title:String
     var year:String
+    var reviews: [Reviews] = []
     
-    init(title: String, year: String) {
+    init(title: String, year: String, reviews:[Reviews] = []) {
         self.title = title
         self.year = year
+        self.reviews = reviews
     }
 }
